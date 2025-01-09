@@ -13,7 +13,7 @@ const firebaseConfig = {
   projectId: "todo-app-7af5f",
   storageBucket: "todo-app-7af5f.firebasestorage.app",
   messagingSenderId: "774819130698",
-  appId: "1:774819130698:web:a56aef1157457660e3e5b3"
+  appId: "1:774819130698:web:a56aef1157457660e3e5b3",
 };
 
 // Initialize Firebase
@@ -61,7 +61,8 @@ function signIn() {
 }
 
 function signOut() {
-  auth.signOut()
+  auth
+    .signOut()
     .then(() => {
       alert("Sign Out Successful!");
       authSection.style.display = "block";
@@ -118,7 +119,7 @@ function renderTodo() {
   for (let i = 0; i < todos.length; i++) {
     todosContainer.innerHTML += `
         <li>
-          ${todos[i]} 
+          <p id="text">${todos[i]}</p>
           <button onclick="editTodo(${i})">Edit</button>
           <button onclick="deleteTodo(${i})">Delete</button>
         </li>
