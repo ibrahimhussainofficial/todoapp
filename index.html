@@ -14,18 +14,23 @@
   <!-- Authentication Forms -->
   <div id="auth-section">
     <h2>Sign Up / Sign In</h2>
-    <input type="email" placeholder="Enter email" id="email">
-    <input type="password" placeholder="Enter password" id="password">
-    <button onclick="signUp()">Sign Up</button>
-    <button onclick="signIn()">Sign In</button>
+    <div class="appSec">
+      <input type="email" placeholder="Enter email" id="email">
+      <input type="password" placeholder="Enter password" id="password">
+      <button onclick="signUp()">Sign Up</button>
+      <button onclick="signIn()">Sign In</button>
+    </div>
   </div>
 
   <div id="app-section" style="display: none;">
     <h2>Welcome, <span id="user-email"></span>!</h2>
-    <button onclick="signOut()">Sign Out</button>
 
+    <div class="outInp">
+      <button onclick="signOut()">Sign Out</button>
 
-    <input type="text" placeholder="Enter todo item" id="userInp">
+      <input type="text" placeholder="Enter todo item" id="userInp">
+    </div>
+
     <div class="btns">
       <button onclick="addTodo()">Add Todo</button>
       <button onclick="dltAll()">Delete All </button>
