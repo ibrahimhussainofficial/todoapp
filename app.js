@@ -228,7 +228,7 @@ function renderTodoItem(id, text) {
   const todoItem = document.createElement("li");
 
   todoItem.innerHTML = `
-    ${text}
+    <p id="text">${text}</p>
     <button onclick="editTodo('${id}', '${text.replace(
     /'/g,
     "\\'"
